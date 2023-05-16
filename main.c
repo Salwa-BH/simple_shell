@@ -1,4 +1,8 @@
 #include "shell.h"
+#include <unistd.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <stddef.h>
 
 /**
  * main - Simple shell program entry point
@@ -6,7 +10,7 @@
  * @argv: Array of command-line arguments
  * Return: Always 0
  */
-int main(/*int argc, char **argv*/)
+int main(int argc, char **argv)
 {
 	char *buffer = NULL;
 	ssize_t read_bytes;
