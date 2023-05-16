@@ -11,7 +11,7 @@ int main(/*int argc, char **argv*/)
 	char *buffer = NULL;
 	ssize_t read_bytes;
 	size_t buffer_size = BUFFER_SIZE;
-    char **args = NULL;
+	char **args = NULL;
 
 	while (1)
 	{

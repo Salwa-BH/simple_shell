@@ -52,7 +52,7 @@ char *get_command_path(char *command)
 	char *path = getenv("PATH");
 	char *token;
 	char *command_path = NULL;
-    char *temp = NULL;
+	char *temp = NULL;
 
 	token = strtok(path, ":");
 	while (token != NULL)
@@ -87,7 +87,7 @@ char *get_command_path(char *command)
 void execute_command(char **args)
 {
 	pid_t child_pid;
-    char *command = NULL;
+	char *command = NULL;
 
 	child_pid = fork();
 	if (child_pid == -1)

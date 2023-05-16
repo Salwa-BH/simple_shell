@@ -1,5 +1,6 @@
 #include "shell.h"
 #include <unistd.h>
+#include <stdlib.h>
 
 /**
  * free_args - Free the memory allocated for command arguments
@@ -7,11 +8,11 @@
  */
 void free_args(char **args)
 {
-    int i = 0;
+	int i = 0;
 
 	if (args != NULL)
 	{
-		for (; args[i] != NULL; i++)
+		for (i = 0; args[i] != NULL; i++)
 		{
 			free(args[i]);
 		}
@@ -27,20 +28,22 @@ void handle_builtin_command(char **args)
 {
 	if (strcmp(args[0], "exit") == 0)
 	{
-		free_args(args);
 		exit(EXIT_SUCCESS);
 	}
 	else if (strcmp(args[0], "env") == 0)
 	{
 		extern char **environ;
 		char **env = environ;
+
 		while (*env)
 		{
 			printf("%s\n", *env);
 			env++;
 		}
-		free_args(args);
 	}
+
+	/* Free the args array without double freeing */
+	free_args(args);
 }
 /**
  * is_builtin_command - Check if the command is a built-in command
