@@ -1,6 +1,10 @@
 #include "shell.h"
 #include <unistd.h>
 #include <stdlib.h>
+#include <stdio.h>
+#include <stddef.h>
+#include <string.h>
+#include <stdarg.h>
 
 /**
  * free_args - Free the memory allocated for command arguments
