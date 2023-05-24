@@ -10,7 +10,7 @@
  * @argv: Array of command-line arguments
  * Return: Always 0
  */
-int main(int argc, char **argv)
+int main(void)
 {
 	char *buffer = NULL;
 	ssize_t read_bytes;
