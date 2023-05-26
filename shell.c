@@ -1,8 +1,4 @@
-#include "shell.h"
-#include <unistd.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <stddef.h>
+#include "holberton.h"
 
 /**
  * main - func with infinite loop
